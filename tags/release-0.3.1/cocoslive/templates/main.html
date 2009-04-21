@@ -1,0 +1,33 @@
+{# cocos live #}
+{# http://www.cocoslive.net #}
+{# License: See LICENSE file #}
+{% extends "page.html" %}
+
+{% block sidebar %}
+{% endblock %}
+
+{% block content %}
+<h2 class="fancy">Latest News</h2>
+<ul>
+<li>cocos Live v0.3.1 released <small><i><b>2009-04-21</b></i></small></li>
+<li><i>See more news here: <a href="news">more news</a></i></li>
+</ul>
+
+<h2 class="fancy">Featured Games</h2>
+
+<table class="stats">
+<thead>
+  <tr class="head"><th>Icon</th><th>View High Scores</th><th>Total number of Scores</th></tr>
+</thead>
+<tbody>
+{% for game in games %}
+<tr class="{% cycle row1,row2 %}">
+  <td><img src="/icon/game?gamename={{game.name}}" title="{{game.name}}"></td>
+  <td><a href="game-scores?gamename={{game.name}}" title="{{game.name}} high scores">{{game.name}}</a></td>
+  <td>{{game.nro_scores}}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+{% endblock %}
