@@ -1,0 +1,21 @@
+{# cocos live #}
+{# http://www.cocoslive.net #}
+{# License: See LICENSE file #}
+{% extends "page.html" %}
+
+{% block sidebar %}
+{% endblock %}
+
+{% block content %}
+
+<ul>
+<li>Games Not Ready: <a href="/admin/list-games-not-ready">list-games-not-ready</a></li>
+<li>Games Ready: <a href="/admin/list-games-ready">list-games-ready</a></li>
+<li>Developers: <a href="/admin/list-devs">list-devs</a></li>
+<li>Developers with Updates: <a href="/admin/list-devs-updates">list-devs-updates</a></li>
+<li>Default values: <a href="/admin/default-values">default-values</a></li>
+<li>MemCache: <a href="/admin/memcache">memcache</a></li>
+<li>Flush MemCache: <a href="/admin/flush-cache">flush-cache</a></li>
+</ul>
+
+{% endblock %}
