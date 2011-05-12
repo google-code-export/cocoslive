@@ -9,6 +9,11 @@
 
 __docformat__ = 'restructuredtext'
 
+
+# django
+from google.appengine.dist import use_library
+use_library('django', '0.96')
+
 # python imports
 import os
 import datetime
