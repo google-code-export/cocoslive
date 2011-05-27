@@ -379,6 +379,16 @@ class FrequentlyAskedQuestions(BaseHandler):
         self.respond('faq', params)
 
 
+#
+# '/shutdown_faq' handler
+#
+class ShutdownFAQ(BaseHandler):
+
+    def get(self):
+        params = {
+            'page' : {'title' : 'Shutdown Frequently Asked Questions'},
+        }
+        self.respond('shutdown_faq', params)
 
 #
 # Dispatcher
@@ -398,6 +408,7 @@ application = webapp.WSGIApplication(
         ('/about', AboutThisService),
         ('/help', HelpTopics),
         ('/faq', FrequentlyAskedQuestions),
+        ('/shutdown_faq', ShutdownFAQ),
         ],
         debug=True)
 
